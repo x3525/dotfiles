@@ -1,0 +1,11 @@
+include config.d/*.conf
+
+# Screen locker
+exec --no-startup-id xss-lock --transfer-sleep-lock -- ~/.local/bin/locker.sh
+
+# Executing applications
+exec_always --no-startup-id ~/.local/bin/restart.sh ~/.config/autostart/desktop.d
+
+focus_follows_mouse no
+
+focus_on_window_activation urgent

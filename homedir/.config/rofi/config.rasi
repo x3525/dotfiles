@@ -1,0 +1,19 @@
+@import "keyboard.rasi"
+@import "mouse.rasi"
+@theme "theme.rasi"
+
+configuration {
+    disable-history: false;
+    dpi: 0;
+    drun-display-format: "{name}";
+    font: "mono 14";
+    icon-theme: "Papirus";
+    max-history-size: 5;
+    modi: "drun,power";
+    monitor: -1;
+    sidebar-mode: false;
+
+    entry {
+        max-history: 0;
+    }
+}

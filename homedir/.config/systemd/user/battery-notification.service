@@ -1,0 +1,9 @@
+[Unit]
+Description=Battery notification service
+
+[Service]
+Type=exec
+ExecStart=-bash -c "BATTERY=$$(cut -c 1 /sys/class/power_supply/BAT0/status) && ! systemctl --user show-environment | grep -q -- BATTERY=$$BATTERY && systemctl --user set-environment BATTERY=$$BATTERY && ~/.local/bin/notify.sh battery $$BATTERY"
+
+[Install]
+WantedBy=default.target

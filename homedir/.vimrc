@@ -2,7 +2,7 @@ unlet! skip_defaults_vim
 source $VIMRUNTIME/defaults.vim
 
 syntax on
-filetype plugin indent on
+filetype indent on
 
 let &t_EI = "\e[2 q"
 let &t_SR = "\e[2 q"
@@ -20,7 +20,7 @@ set list
 set listchars=tab:>-,trail:^,extends:>,precedes:<,nbsp:~
 set mouse=
 set nobackup
-set nocompatible
+set noloadplugins
 set noshowmatch
 set scrolloff=0
 set shiftwidth=4

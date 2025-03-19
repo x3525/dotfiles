@@ -22,7 +22,7 @@ set mouse=
 set nobackup
 set noloadplugins
 set noshowmatch
-set scrolloff=0
+set scrolloff=999
 set shiftwidth=4
 set showmode
 set smartcase

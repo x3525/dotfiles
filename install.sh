@@ -6,8 +6,6 @@ then
     exit 1
 fi
 
-rm -rf ~/.oh-my-zsh
-
 # Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 

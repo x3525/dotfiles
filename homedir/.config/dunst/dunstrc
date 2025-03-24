@@ -51,7 +51,7 @@
 
     # Set the progress bar height. This includes the frame, so make sure
     # it's at least twice as big as the frame width.
-    progress_bar_height = 20
+    progress_bar_height = 30
 
     # Set the frame width of the progress bar
     progress_bar_frame_width = 0
@@ -97,7 +97,7 @@
     frame_width = 4
 
     # Defines color of the frame around the notification window.
-    frame_color = "#000000"
+    frame_color = "#000000ff"
 
     # Size of gap to display between notifications - requires a compositor.
     # If value is greater than 0, separator_height will be ignored and a border
@@ -316,24 +316,24 @@
 
 [urgency_low]
     timeout = 3
-    background = "#000000"
-    foreground = "#ffffff"
-    highlight = "#097969"
-    frame_color = "#097969"
+    background = "#000000ff"
+    foreground = "#ffffffff"
+    highlight = "#097969ff"
+    frame_color = "#097969ff"
     fullscreen = show
 
 [urgency_normal]
     timeout = 0
-    background = "#000000"
-    foreground = "#ffffff"
-    highlight = "#008080"
-    frame_color = "#008080"
+    background = "#000000ff"
+    foreground = "#ffffffff"
+    highlight = "#008080ff"
+    frame_color = "#008080ff"
     fullscreen = show
 
 [urgency_critical]
     timeout = 0
-    background = "#000000"
-    foreground = "#ffffff"
-    highlight = "#880808"
-    frame_color = "#880808"
+    background = "#000000ff"
+    foreground = "#ffffffff"
+    highlight = "#880808ff"
+    frame_color = "#880808ff"
     fullscreen = show

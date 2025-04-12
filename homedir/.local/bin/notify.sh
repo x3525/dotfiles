@@ -16,10 +16,10 @@ case $1 in
     battery)
         case $2 in
             C)
-                notify-send -u LOW -h string:x-dunst-stack-tag:battery -i battery-good-charging "Battery" "Battery is charging..."
+                notify-send -u LOW -h string:x-dunst-stack-tag:battery -i battery-good-charging "Battery" "Battery is charging"
                 ;;
             D)
-                notify-send -u CRITICAL -h string:x-dunst-stack-tag:battery -i battery-low "Battery" "Battery is discharging..."
+                notify-send -u CRITICAL -h string:x-dunst-stack-tag:battery -i battery-050 "Battery" "Battery is discharging"
                 ;;
             F)
                 ;;

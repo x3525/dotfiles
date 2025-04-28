@@ -315,25 +315,32 @@
     mouse_right_click = close_current
 
 [urgency_low]
-    timeout = 3
     background = "#000000ff"
     foreground = "#ffffffff"
     highlight = "#097969ff"
     frame_color = "#097969ff"
     fullscreen = show
+    timeout = 3
 
 [urgency_normal]
-    timeout = 0
     background = "#000000ff"
     foreground = "#ffffffff"
     highlight = "#008080ff"
     frame_color = "#008080ff"
     fullscreen = show
+    timeout = 0
 
 [urgency_critical]
-    timeout = 0
     background = "#000000ff"
     foreground = "#ffffffff"
     highlight = "#880808ff"
     frame_color = "#880808ff"
     fullscreen = show
+    timeout = 0
+
+# Every section that isn't one of the above is interpreted as a rules to
+# override settings for certain messages.
+
+[ignore]
+    summary = "ignore-this-notification"
+    skip_display = true

@@ -2,7 +2,7 @@
 
 case $1 in
     volume)
-        pamixer -"$2" 5 --allow-boost --set-limit=150 && killall -USR1 i3status
+        pamixer -"$2" 5 --allow-boost --set-limit=150 && killall -s USR1 i3status
 
         if pamixer --get-mute | grep -q true
         then
@@ -22,8 +22,10 @@ case $1 in
                 notify-send -u CRITICAL -h string:x-dunst-stack-tag:battery -i battery-050 "Battery" "Battery is discharging"
                 ;;
             F)
+                notify-send -h string:x-dunst-stack-tag:battery "ignore-this-notification"
                 ;;
             N)
+                notify-send -h string:x-dunst-stack-tag:battery "ignore-this-notification"
                 ;;
             U)
                 notify-send -u CRITICAL -h string:x-dunst-stack-tag:battery -i battery-missing "Battery" "Battery status unknown"

@@ -1,4 +1,4 @@
 [Desktop Entry]
-Exec=redshift
-Name=redshift
+Exec=gammastep -P
+Name=gammastep
 Type=Application

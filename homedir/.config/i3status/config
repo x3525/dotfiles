@@ -13,7 +13,7 @@ order += "cpu_usage"
 order += "memory"
 order += "volume master"
 order += "battery all"
-order += "tztime local"
+order += "tztime weekday"
 order += "time"
 
 battery all {
@@ -43,8 +43,8 @@ cpu_usage {
 }
 
 ethernet _first_ {
-    format_up = "E"
     format_down = ""
+    format_up = "E"
 }
 
 memory {
@@ -61,19 +61,21 @@ time {
     format = "%H:%M:%S%n%d/%m/%y"
 }
 
-tztime local {
+tztime weekday {
     format = "%a"
     hide_if_equals_localtime = false
 }
 
 volume master {
     align = "left"
+    device = "default"
     format = "V %volume"
     format_muted = "M %volume"
     min_width = "V ***%"
 }
 
 wireless _first_ {
-    format_up = "W"
     format_down = ""
+    format_quality = "%3d%s"
+    format_up = "W %quality"
 }

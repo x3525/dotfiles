@@ -38,7 +38,7 @@ DISABLE_MAGIC_FUNCTIONS="true"
 DISABLE_LS_COLORS="false"
 
 # Uncomment the following line to disable auto-setting terminal title.
-DISABLE_AUTO_TITLE="false"
+DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="false"

@@ -1,0 +1,147 @@
+{
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "blocks": [
+        {
+            "alignment": "left",
+            "newline": false,
+            "segments": [
+                {
+                    "foreground": "blue",
+                    "properties": {
+                        "folder_separator_icon": "/",
+                        "home_icon": "~",
+                        "style": "full"
+                    },
+                    "style": "plain",
+                    "template": "{{ .Path }}",
+                    "type": "path"
+                },
+                {
+                    "foreground": "green",
+                    "leading_diamond": " ",
+                    "properties": {
+                        "branch_ahead_icon": ">",
+                        "branch_behind_icon": "<",
+                        "branch_gone_icon": "",
+                        "branch_icon": "",
+                        "branch_identical_icon": "",
+                        "branch_template": "{{ .Branch }}",
+                        "cherry_pick_icon": "",
+                        "commit_icon": "",
+                        "fetch_bare_info": false,
+                        "fetch_status": true,
+                        "fetch_upstream_icon": false,
+                        "fetch_user": false,
+                        "merge_icon": "",
+                        "no_commits_icon": "",
+                        "rebase_icon": "",
+                        "revert_icon": "",
+                        "source": "cli",
+                        "tag_icon": ""
+                    },
+                    "style": "diamond",
+                    "template": "{{ .HEAD }}{{ if .Commit.Sha }} {{ trunc 7 .Commit.Sha }}{{ end }}{{ if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Staging.Changed }} <yellow>{{ .Staging.String }}</>{{ end }}{{ if .Working.Changed }} <blue>{{ .Working.String }}</>{{ end }}",
+                    "type": "git"
+                }
+            ],
+            "type": "prompt"
+        },
+        {
+            "alignment": "right",
+            "newline": false,
+            "overflow": "break",
+            "segments": [
+                {
+                    "foreground": "red",
+                    "properties": {
+                        "always_enabled": false,
+                        "status_separator": "|",
+                        "status_template": "{{ .Code }}"
+                    },
+                    "style": "plain",
+                    "template": "{{ .String }}",
+                    "type": "status"
+                },
+                {
+                    "foreground": "magenta",
+                    "leading_diamond": " ",
+                    "properties": {
+                        "always_enabled": false,
+                        "style": "round",
+                        "threshold": 1000
+                    },
+                    "style": "diamond",
+                    "template": "{{ .FormattedMs }}",
+                    "type": "executiontime"
+                },
+                {
+                    "foreground": "white",
+                    "leading_diamond": " ",
+                    "style": "diamond",
+                    "template": "{{ if gt .Jobs 0 }}%{{ end }}",
+                    "type": "text"
+                },
+                {
+                    "foreground": "cyan",
+                    "leading_diamond": " ",
+                    "properties": {
+                        "cache_duration": "none",
+                        "display_default": true,
+                        "display_mode": "environment",
+                        "fetch_version": true,
+                        "fetch_virtual_env": true,
+                        "folder_name_fallback": false,
+                        "home_enabled": true
+                    },
+                    "style": "diamond",
+                    "template": "{{ .Venv }}:{{ .Full }}",
+                    "type": "python"
+                },
+                {
+                    "foreground": "blue",
+                    "leading_diamond": " ",
+                    "properties": {
+                        "command": "pyenv version-name",
+                        "shell": "bash"
+                    },
+                    "style": "diamond",
+                    "template": "{{ .Output }}",
+                    "type": "command"
+                },
+                {
+                    "foreground": "yellow",
+                    "leading_diamond": " ",
+                    "properties": {
+                        "command": "ip -j -o -4 address show | jq -r '.[] | .addr_info[] | select(.dev | test(\"(gpd|wg|(.*tun)|tailscale)[0-9]*|(zt.*)\")) | .local' | paste -s -d ' '",
+                        "shell": "bash"
+                    },
+                    "style": "diamond",
+                    "template": "{{ .Output }}",
+                    "type": "command"
+                }
+            ],
+            "type": "prompt"
+        },
+        {
+            "alignment": "left",
+            "newline": true,
+            "segments": [
+                {
+                    "foreground": "cyan",
+                    "foreground_templates": [
+                        "{{ if .Root }}red{{ end }}"
+                    ],
+                    "properties": {
+                        "time_format": "15:04:05"
+                    },
+                    "style": "plain",
+                    "template": "{{ .CurrentDate | date .Format }}",
+                    "type": "time"
+                }
+            ],
+            "type": "prompt"
+        }
+    ],
+    "final_space": true,
+    "version": 3
+}

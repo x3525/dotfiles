@@ -150,11 +150,5 @@
         }
     ],
     "final_space": true,
-    "upgrade": {
-        "auto": false,
-        "interval": "168h",
-        "notice": true,
-        "source": "cdn"
-    },
     "version": 3
 }

@@ -45,7 +45,7 @@
                         "{{ if .Commit.Sha }} {{ trunc 7 .Commit.Sha }}{{ end }}",
                         "{{ if .BranchStatus }} {{ .BranchStatus }}{{ end }}",
                         "{{ if .Staging.Changed }} <yellow>{{ .Staging.String }}</>{{ end }}",
-                        "{{ if .Working.Changed }} <white>{{ .Working.String }}</>{{ end }}"
+                        "{{ if .Working.Changed }} <blue>{{ .Working.String }}</>{{ end }}"
                     ],
                     "templates_logic": "join",
                     "type": "git"

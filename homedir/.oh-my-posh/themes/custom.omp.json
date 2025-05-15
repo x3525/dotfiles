@@ -28,7 +28,7 @@
                         "branch_template": "{{ .Branch }}",
                         "cherry_pick_icon": "",
                         "commit_icon": "",
-                        "fetch_bare_info": false,
+                        "fetch_bare_info": true,
                         "fetch_status": true,
                         "fetch_upstream_icon": false,
                         "fetch_user": false,
@@ -40,7 +40,14 @@
                         "tag_icon": ""
                     },
                     "style": "diamond",
-                    "template": "{{ .HEAD }}{{ if .Commit.Sha }} {{ trunc 7 .Commit.Sha }}{{ end }}{{ if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Staging.Changed }} <yellow>{{ .Staging.String }}</>{{ end }}{{ if .Working.Changed }} <blue>{{ .Working.String }}</>{{ end }}",
+                    "templates": [
+                        "{{ .HEAD }}",
+                        "{{ if .Commit.Sha }} {{ trunc 7 .Commit.Sha }}{{ end }}",
+                        "{{ if .BranchStatus }} {{ .BranchStatus }}{{ end }}",
+                        "{{ if .Staging.Changed }} <yellow>{{ .Staging.String }}</>{{ end }}",
+                        "{{ if .Working.Changed }} <white>{{ .Working.String }}</>{{ end }}"
+                    ],
+                    "templates_logic": "join",
                     "type": "git"
                 }
             ],
@@ -94,7 +101,7 @@
                         "home_enabled": true
                     },
                     "style": "diamond",
-                    "template": "{{ .Venv }}:{{ .Full }}",
+                    "template": "{{ .Venv }}",
                     "type": "python"
                 },
                 {

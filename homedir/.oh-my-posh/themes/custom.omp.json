@@ -18,7 +18,6 @@
                 },
                 {
                     "foreground": "green",
-                    "leading_diamond": " ",
                     "properties": {
                         "branch_ahead_icon": ">",
                         "branch_behind_icon": "<",
@@ -39,15 +38,8 @@
                         "source": "cli",
                         "tag_icon": ""
                     },
-                    "style": "diamond",
-                    "templates": [
-                        "{{ .HEAD }}",
-                        "{{ if .Commit.Sha }} {{ trunc 7 .Commit.Sha }}{{ end }}",
-                        "{{ if .BranchStatus }} {{ .BranchStatus }}{{ end }}",
-                        "{{ if .Staging.Changed }} <yellow>{{ .Staging.String }}</>{{ end }}",
-                        "{{ if .Working.Changed }} <blue>{{ .Working.String }}</>{{ end }}"
-                    ],
-                    "templates_logic": "join",
+                    "style": "plain",
+                    "template": " {{ .HEAD }}{{ if .BranchStatus }} <magenta>{{ .BranchStatus }}</>{{ end }}{{ if .Staging.Changed }} <yellow>{{ .Staging.String }}</>{{ end }}{{ if .Working.Changed }} <blue>{{ .Working.String }}</>{{ end }}",
                     "type": "git"
                 }
             ],
@@ -66,31 +58,38 @@
                         "status_template": "{{ .Code }}"
                     },
                     "style": "plain",
-                    "template": "{{ .String }}",
+                    "template": "{{ .String }} ",
                     "type": "status"
                 },
                 {
                     "foreground": "magenta",
-                    "leading_diamond": " ",
                     "properties": {
                         "always_enabled": false,
                         "style": "round",
                         "threshold": 1000
                     },
-                    "style": "diamond",
-                    "template": "{{ .FormattedMs }}",
+                    "style": "plain",
+                    "template": "{{ .FormattedMs }} ",
                     "type": "executiontime"
                 },
                 {
                     "foreground": "white",
-                    "leading_diamond": " ",
-                    "style": "diamond",
-                    "template": "{{ if gt .Jobs 0 }}%{{ end }}",
+                    "style": "plain",
+                    "template": "{{ if gt .Jobs 0 }}% {{ end }}",
                     "type": "text"
                 },
                 {
+                    "foreground": "yellow",
+                    "properties": {
+                        "command": "ip -j -o -4 address show | jq -r '.[] | .addr_info[] | select(.dev | test(\"(gpd|wg|(.*tun)|tailscale)[0-9]*|(zt.*)\")) | .local' | paste -s -d ' '",
+                        "shell": "bash"
+                    },
+                    "style": "plain",
+                    "template": "{{ .Output }} ",
+                    "type": "command"
+                },
+                {
                     "foreground": "cyan",
-                    "leading_diamond": " ",
                     "properties": {
                         "cache_duration": "none",
                         "display_default": true,
@@ -100,29 +99,17 @@
                         "folder_name_fallback": false,
                         "home_enabled": true
                     },
-                    "style": "diamond",
-                    "template": "{{ .Venv }}",
+                    "style": "plain",
+                    "template": "{{ .Venv }} ",
                     "type": "python"
                 },
                 {
                     "foreground": "blue",
-                    "leading_diamond": " ",
                     "properties": {
                         "command": "pyenv version-name",
                         "shell": "bash"
                     },
-                    "style": "diamond",
-                    "template": "{{ .Output }}",
-                    "type": "command"
-                },
-                {
-                    "foreground": "yellow",
-                    "leading_diamond": " ",
-                    "properties": {
-                        "command": "ip -j -o -4 address show | jq -r '.[] | .addr_info[] | select(.dev | test(\"(gpd|wg|(.*tun)|tailscale)[0-9]*|(zt.*)\")) | .local' | paste -s -d ' '",
-                        "shell": "bash"
-                    },
-                    "style": "diamond",
+                    "style": "plain",
                     "template": "{{ .Output }}",
                     "type": "command"
                 }

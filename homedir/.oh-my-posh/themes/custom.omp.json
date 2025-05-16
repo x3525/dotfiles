@@ -7,6 +7,9 @@
             "segments": [
                 {
                     "foreground": "blue",
+                    "foreground_templates": [
+                        "{{ if not .Writable }}red{{ end }}"
+                    ],
                     "properties": {
                         "folder_separator_icon": "/",
                         "home_icon": "~",

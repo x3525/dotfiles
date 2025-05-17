@@ -1,2 +1,2 @@
-setopt +o AUTO_CD
-setopt -o CD_SILENT
+setopt +o autocd
+setopt -o cdsilent

@@ -16,7 +16,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/
 # Oh My Posh
 curl -s https://ohmyposh.dev/install.sh | bash -s
 
-cp -r homedir/. ~
+cp -r .[!g]* ~
 
 # Build font information cache files
 fc-cache -fv

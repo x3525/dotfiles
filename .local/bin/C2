@@ -51,6 +51,7 @@ function restart()
     for d in "$1"/*
     do
         f=$(basename -- "$d")
+
         p=${f%.*}
 
         killall -q -- "$p"

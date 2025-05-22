@@ -35,7 +35,7 @@ inputbar {
 }
 
 listview {
-    columns: 1;
+    columns: 2;
     cycle: true;
     flow: vertical;
     require-input: false;

@@ -1,4 +1,4 @@
-alias cat='bat -pp'
+alias cat='bat -pp --theme="Solarized (dark)"'
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
 alias rm='trash-put'

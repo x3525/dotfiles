@@ -114,15 +114,9 @@
             "segments": [
                 {
                     "foreground": "cyan",
-                    "foreground_templates": [
-                        "{{ if .Root }}red{{ end }}"
-                    ],
-                    "properties": {
-                        "time_format": "15:04:05"
-                    },
                     "style": "plain",
-                    "template": "{{ .CurrentDate | date .Format }}",
-                    "type": "time"
+                    "template": "{{ if .Root }}<red>#</>{{ else }}${{ end }}",
+                    "type": "text"
                 }
             ],
             "type": "prompt"

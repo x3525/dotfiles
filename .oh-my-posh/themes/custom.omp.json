@@ -67,13 +67,14 @@
                 {
                     "foreground": "yellow",
                     "style": "plain",
-                    "template": "{{ if gt .Jobs 0 }}% {{ end }}",
+                    "template": "{{ if gt .Jobs 0 }}& {{ end }}",
                     "type": "text"
                 },
                 {
                     "foreground": "magenta",
                     "properties": {
                         "command": "ip -j -o -4 address show | jq -r '.[] | .addr_info[] | select(.dev | test(\"(gpd|wg|(.*tun)|tailscale)[0-9]*|(zt.*)\")) | .dev' | paste -s -d ' '",
+                        "interpret": true,
                         "shell": "bash"
                     },
                     "style": "plain",
@@ -99,6 +100,7 @@
                     "foreground": "blue",
                     "properties": {
                         "command": "pyenv version-name",
+                        "interpret": true,
                         "shell": "bash"
                     },
                     "style": "plain",

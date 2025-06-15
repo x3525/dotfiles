@@ -65,6 +65,17 @@
                     "type": "status"
                 },
                 {
+                    "foreground": "green",
+                    "properties": {
+                        "always_enabled": false,
+                        "style": "roundrock",
+                        "threshold": 1000
+                    },
+                    "style": "plain",
+                    "template": "{{ .FormattedMs }} ",
+                    "type": "executiontime"
+                },
+                {
                     "foreground": "yellow",
                     "style": "plain",
                     "template": "{{ if gt .Jobs 0 }}& {{ end }}",

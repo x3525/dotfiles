@@ -3,13 +3,17 @@
 @theme "theme.rasi"
 
 configuration {
+    case-sensitive: false;
     disable-history: false;
     dpi: 0;
     drun-display-format: "{name}";
+    drun-match-fields: "name";
     icon-theme: "Papirus";
+    matching: "normal";
     max-history-size: 10;
     modi: "drun,power";
     monitor: -1;
+    normalize-match: false;
     sidebar-mode: false;
 
     entry {

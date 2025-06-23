@@ -4,7 +4,7 @@ LOCK()
 {
     dunstctl set-paused true
 
-    i3lock --nofork -c 000000 -p default -e -f -k
+    i3lock -n -c 000000 -p default -e -f -k
 
     dunstctl set-paused false
 }

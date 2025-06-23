@@ -12,7 +12,7 @@ LOCK()
 NOTIFY()
 {
     case $1 in
-        battery)
+        BATTERY)
             case $3 in
                 0)
                     ICON=battery-000
@@ -45,7 +45,7 @@ NOTIFY()
                     ;;
             esac
             ;;
-        volume)
+        VOLUME)
             pamixer -"$2" "$3" --allow-boost --set-limit=150 && killall -s USR1 i3status
 
             if pamixer --get-mute | grep -q true

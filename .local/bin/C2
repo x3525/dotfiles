@@ -35,10 +35,10 @@ function Notify()
                     notify-send -u CRITICAL -h string:x-dunst-stack-tag:battery -i "$ICON" "Battery" "Battery is discharging"
                     ;;
                 F)
-                    notify-send -h string:x-dunst-stack-tag:battery "ignore-this-notification"
+                    notify-send -h string:x-dunst-stack-tag:battery "IGNORE-THIS-NOTIFICATION"
                     ;;
                 N)
-                    notify-send -h string:x-dunst-stack-tag:battery "ignore-this-notification"
+                    notify-send -h string:x-dunst-stack-tag:battery "IGNORE-THIS-NOTIFICATION"
                     ;;
                 U)
                     notify-send -u CRITICAL -h string:x-dunst-stack-tag:battery -i battery-missing "Battery" "Battery status unknown"

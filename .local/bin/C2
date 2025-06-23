@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function Lock()
+Lock()
 {
     dunstctl set-paused true
 
@@ -9,7 +9,7 @@ function Lock()
     dunstctl set-paused false
 }
 
-function Notify()
+Notify()
 {
     case $1 in
         battery)
@@ -60,7 +60,7 @@ function Notify()
     esac
 }
 
-function Restart()
+Restart()
 {
     for d in "$1"/*
     do
@@ -70,7 +70,7 @@ function Restart()
 
         killall -q -- "$p"
 
-        while pgrep -u "$UID" -x "$p" > /dev/null
+        while pgrep -u "$(id -u)" -x "$p" > /dev/null
         do
             sleep 1
         done

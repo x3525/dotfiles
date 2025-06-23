@@ -12,7 +12,7 @@ LOCK()
 NOTIFY()
 {
     case $1 in
-        BATTERY)
+        B)
             case $3 in
                 0)
                     ICON=battery-000
@@ -45,7 +45,7 @@ NOTIFY()
                     ;;
             esac
             ;;
-        VOLUME)
+        V)
             pamixer -"$2" "$3" --allow-boost --set-limit=150 && killall -s USR1 i3status
 
             if pamixer --get-mute | grep -q true
@@ -55,7 +55,7 @@ NOTIFY()
                 ICON=volume-level-high
             fi
 
-            notify-send -u LOW -h string:x-dunst-stack-tag:volume -i "$ICON" "VOLUME" -h int:value:"$(pamixer --get-volume)"
+            notify-send -u LOW -h string:x-dunst-stack-tag:volume -i "$ICON" "VOLUME-PROGRESS" -h int:value:"$(pamixer --get-volume)"
             ;;
     esac
 }

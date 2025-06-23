@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function lock()
+function Lock()
 {
     dunstctl set-paused true
 
@@ -9,7 +9,7 @@ function lock()
     dunstctl set-paused false
 }
 
-function notify()
+function Notify()
 {
     case $1 in
         battery)
@@ -60,7 +60,7 @@ function notify()
     esac
 }
 
-function restart()
+function Restart()
 {
     for d in "$1"/*
     do

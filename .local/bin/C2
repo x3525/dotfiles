@@ -29,10 +29,10 @@ NOTIFY()
             esac
             case $2 in
                 C)
-                    notify-send -u LOW -h string:x-dunst-stack-tag:battery -i "$ICON"-charging "BATTERY" "BATTERY IS CHARGING"
+                    notify-send -u LOW -h string:x-dunst-stack-tag:battery -i "$ICON"-charging "BATTERY CHARGING"
                     ;;
                 D)
-                    notify-send -u CRITICAL -h string:x-dunst-stack-tag:battery -i "$ICON" "BATTERY" "BATTERY IS DISCHARGING"
+                    notify-send -u CRITICAL -h string:x-dunst-stack-tag:battery -i "$ICON" "BATTERY DISCHARGING"
                     ;;
                 F)
                     notify-send -h string:x-dunst-stack-tag:battery "IGNORE-THIS-NOTIFICATION"
@@ -41,7 +41,7 @@ NOTIFY()
                     notify-send -h string:x-dunst-stack-tag:battery "IGNORE-THIS-NOTIFICATION"
                     ;;
                 U)
-                    notify-send -u CRITICAL -h string:x-dunst-stack-tag:battery -i battery-missing "BATTERY" "BATTERY STATUS UNKNOWN"
+                    notify-send -u CRITICAL -h string:x-dunst-stack-tag:battery -i battery-missing "BATTERY STATUS UNKNOWN"
                     ;;
             esac
             ;;

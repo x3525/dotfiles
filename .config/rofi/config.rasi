@@ -7,7 +7,7 @@ configuration {
     disable-history: false;
     dpi: 0;
     drun-display-format: "{name}";
-    drun-match-fields: "name";
+    drun-match-fields: "name,exec";
     icon-theme: "Papirus";
     matching: "normal";
     max-history-size: 10;

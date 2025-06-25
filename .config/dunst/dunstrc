@@ -341,6 +341,6 @@
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.
 
-[notification-ignore]
-    summary = "notification-ignore"
+[ignore]
+    summary = "honorificabilitudinitatibus"
     skip_display = true

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-LOCK()
+lock()
 {
     dunstctl set-paused true
 
@@ -9,10 +9,10 @@ LOCK()
     dunstctl set-paused false
 }
 
-NOTIFY()
+notify()
 {
     case $1 in
-        B)
+        battery)
             case $3 in
                 0)
                     ICON=battery-000
@@ -29,10 +29,10 @@ NOTIFY()
             esac
             case $2 in
                 C)
-                    notify-send -u low -h string:x-dunst-stack-tag:battery -i "$ICON"-charging "BATTERY CHARGING"
+                    notify-send -u low -h string:x-dunst-stack-tag:battery -i "$ICON"-charging "Battery" "Battery is charging"
                     ;;
                 D)
-                    notify-send -u critical -h string:x-dunst-stack-tag:battery -i "$ICON" "BATTERY DISCHARGING"
+                    notify-send -u critical -h string:x-dunst-stack-tag:battery -i "$ICON" "Battery" "Battery is discharging"
                     ;;
                 F)
                     notify-send -h string:x-dunst-stack-tag:battery "notification-ignore"
@@ -41,11 +41,11 @@ NOTIFY()
                     notify-send -h string:x-dunst-stack-tag:battery "notification-ignore"
                     ;;
                 U)
-                    notify-send -u critical -h string:x-dunst-stack-tag:battery -i battery-missing "BATTERY STATUS UNKNOWN"
+                    notify-send -u critical -h string:x-dunst-stack-tag:battery -i battery-missing "Battery" "Battery status unknown"
                     ;;
             esac
             ;;
-        V)
+        volume)
             pamixer -"$2" "$3" --allow-boost --set-limit=150 && killall -s USR1 i3status
 
             if pamixer --get-mute | grep -q true
@@ -60,7 +60,7 @@ NOTIFY()
     esac
 }
 
-RESTART()
+restart()
 {
     for d in "$1"/*
     do

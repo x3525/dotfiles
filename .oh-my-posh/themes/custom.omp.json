@@ -84,7 +84,7 @@
                 {
                     "foreground": "magenta",
                     "properties": {
-                        "command": "ip -j -o -4 address show | jq -r '.[] | .addr_info[] | select(.dev | test(\"(gpd|wg|(.*tun)|tailscale)[0-9]*|(zt.*)\")) | .dev' | paste -s -d ' '",
+                        "command": "ip -j -o -4 address show | jq -r '.[] | .addr_info[] | select(.dev | test(\"(gpd|wg|(.*tun)|tailscale)[0-9]*|(zt.*)\")) | .dev' | xargs",
                         "interpret": true,
                         "shell": "bash"
                     },

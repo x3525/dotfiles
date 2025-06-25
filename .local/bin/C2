@@ -29,19 +29,19 @@ NOTIFY()
             esac
             case $2 in
                 C)
-                    notify-send -u LOW -h string:x-dunst-stack-tag:battery -i "$ICON"-charging "BATTERY CHARGING"
+                    notify-send -u low -h string:x-dunst-stack-tag:battery -i "$ICON"-charging "BATTERY CHARGING"
                     ;;
                 D)
-                    notify-send -u CRITICAL -h string:x-dunst-stack-tag:battery -i "$ICON" "BATTERY DISCHARGING"
+                    notify-send -u critical -h string:x-dunst-stack-tag:battery -i "$ICON" "BATTERY DISCHARGING"
                     ;;
                 F)
-                    notify-send -h string:x-dunst-stack-tag:battery "IGNORE-THIS-NOTIFICATION"
+                    notify-send -h string:x-dunst-stack-tag:battery "ignore-this-notification"
                     ;;
                 N)
-                    notify-send -h string:x-dunst-stack-tag:battery "IGNORE-THIS-NOTIFICATION"
+                    notify-send -h string:x-dunst-stack-tag:battery "ignore-this-notification"
                     ;;
                 U)
-                    notify-send -u CRITICAL -h string:x-dunst-stack-tag:battery -i battery-missing "BATTERY STATUS UNKNOWN"
+                    notify-send -u critical -h string:x-dunst-stack-tag:battery -i battery-missing "BATTERY STATUS UNKNOWN"
                     ;;
             esac
             ;;
@@ -55,7 +55,7 @@ NOTIFY()
                 ICON=volume-level-high
             fi
 
-            notify-send -u LOW -h string:x-dunst-stack-tag:volume -i "$ICON" "VOLUME-PROGRESS" -h int:value:"$(pamixer --get-volume)"
+            notify-send -u low -h string:x-dunst-stack-tag:volume -i "$ICON" "" -h int:value:"$(pamixer --get-volume)"
             ;;
     esac
 }

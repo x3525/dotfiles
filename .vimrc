@@ -1,8 +1,10 @@
-unlet! skip_defaults_vim
-source $VIMRUNTIME/defaults.vim
+set nocompatible
+set noloadplugins
 
-syntax on
+autocmd BufReadPost * if line("'\"") >= 1 && line("'\"") <= line("$") | execute "normal! g`\"" | endif
+
 filetype indent on
+syntax on
 
 let &t_EI = "\e[2 q"
 let &t_SI = "\e[6 q"
@@ -20,7 +22,6 @@ set list
 set listchars=tab:>-,trail:^,extends:>,precedes:<,nbsp:~
 set mouse=
 set nobackup
-set noloadplugins
 set noshowmatch
 set scrolloff=999
 set shiftwidth=4

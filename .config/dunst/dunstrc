@@ -314,13 +314,13 @@
     mouse_middle_click = close_all
     mouse_right_click = close_current
 
-[urgency_low]
+[urgency_critical]
     background = "#000000ff"
     foreground = "#ffffffff"
-    highlight = "#097969ff"
-    frame_color = "#097969ff"
+    highlight = "#880808ff"
+    frame_color = "#880808ff"
     fullscreen = show
-    timeout = 3
+    timeout = 0
 
 [urgency_normal]
     background = "#000000ff"
@@ -330,17 +330,17 @@
     fullscreen = show
     timeout = 0
 
-[urgency_critical]
+[urgency_low]
     background = "#000000ff"
     foreground = "#ffffffff"
-    highlight = "#880808ff"
-    frame_color = "#880808ff"
+    highlight = "#097969ff"
+    frame_color = "#097969ff"
     fullscreen = show
-    timeout = 0
+    timeout = 3
 
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.
 
-[ignore-this-notification]
-    summary = "ignore-this-notification"
+[notification-ignore]
+    summary = "notification-ignore"
     skip_display = true

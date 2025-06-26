@@ -1,5 +1,5 @@
 [Unit]
-Description=Battery notification service
+Description=Battery Notification
 
 [Service]
 Type=exec

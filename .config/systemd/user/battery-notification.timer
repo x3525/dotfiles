@@ -1,5 +1,5 @@
 [Unit]
-Description=Battery notification timer
+Description=BAT0
 ConditionPathExists=/sys/class/power_supply/BAT0
 
 [Timer]

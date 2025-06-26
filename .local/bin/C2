@@ -46,7 +46,9 @@ notify()
             esac
             ;;
         volume)
-            pamixer -"$2" "$3" --allow-boost --set-limit=150 && killall -s USR1 i3status
+            pamixer -"$2" "$3" --allow-boost --set-limit=150
+
+            killall -s USR1 i3status
 
             if pamixer --get-mute | grep -q true
             then

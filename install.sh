@@ -6,8 +6,6 @@ then
     exit 1
 fi
 
-rfkill block bluetooth
-
 # Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 

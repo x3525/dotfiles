@@ -1,6 +1,6 @@
 [Unit]
 Description=Battery notification timer
-ConditionPathExistsGlob=/sys/class/power_supply/BAT[0-9]*
+ConditionPathExists=/sys/class/power_supply/BAT0
 
 [Timer]
 AccuracySec=1s

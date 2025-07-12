@@ -21,3 +21,7 @@ blue    = "#839496"
 magenta = "#6c71c4"
 cyan    = "#93a1a1"
 white   = "#fdf6e3"
+
+[colors.cursor]
+text   = "CellBackground"
+cursor = "CellForeground"

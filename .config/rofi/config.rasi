@@ -22,7 +22,7 @@ configuration {
 
     window {
         close-on-delete: false;
-        hide-active-window: true;
+        hide-active-window: false;
         prefer-icon-theme: true;
     }
 

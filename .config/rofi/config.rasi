@@ -8,17 +8,18 @@ configuration {
     dpi: 0;
     drun-display-format: "{name}";
     drun-match-fields: "name#exec";
-    font: "JetBrains Mono 14";
+    font: "JetBrains Mono 12";
     hover-select: false;
     icon-theme: "Papirus";
     matching: "normal";
     max-history-size: 10;
-    modi: "drun#power";
+    modes: "drun#power";
     monitor: -1;
     normalize-match: false;
     scroll-method: 0;
     sidebar-mode: false;
-    window-format: "{t:0}";
+    window-format: "({w:0}) {t:0}";
+    window-match-fields: "all";
 
     window {
         close-on-delete: false;

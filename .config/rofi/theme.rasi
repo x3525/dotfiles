@@ -8,7 +8,7 @@
 }
 
 element {
-    children: [ element-icon,element-text ];
+    children: [ element-icon, element-text ];
     padding: 20px;
     spacing: 20px;
 }

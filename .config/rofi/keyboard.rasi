@@ -71,4 +71,6 @@ configuration {
     kb-select-10: "";
     kb-entry-history-up: "";
     kb-entry-history-down: "";
+    kb-matcher-up: "";
+    kb-matcher-down: "";
 }

@@ -8,7 +8,7 @@
 }
 
 element {
-    children: [ element-icon, element-text ];
+    children: [ element-icon,element-text ];
     padding: 20px;
     spacing: 20px;
 }
@@ -37,7 +37,10 @@ inputbar {
 listview {
     columns: 2;
     cycle: true;
+    fixed-height: true;
     flow: vertical;
+    layout: vertical;
+    lines: 8;
     require-input: false;
     reverse: false;
 }
@@ -49,6 +52,7 @@ mainbox {
 window {
     border-color: DarkSlateGray;
     border: 5px;
-    fullscreen: true;
+    fullscreen: false;
     location: center;
+    width: 70%;
 }

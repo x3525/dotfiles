@@ -5,8 +5,8 @@ configuration {
     kb-clear-line: "";
     kb-move-front: "";
     kb-move-end: "";
-    kb-move-word-back: "Control+Left";
-    kb-move-word-forward: "Control+Right";
+    kb-move-word-back: "";
+    kb-move-word-forward: "";
     kb-move-char-back: "Left";
     kb-move-char-forward: "Right";
     kb-remove-word-back: "";

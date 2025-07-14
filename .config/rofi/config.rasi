@@ -13,7 +13,6 @@ configuration {
     icon-theme: "Papirus";
     matching: "normal";
     max-history-size: 10;
-    modes: "drun#power";
     monitor: -1;
     normalize-match: false;
     scroll-method: 0;

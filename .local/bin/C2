@@ -9,6 +9,21 @@ lock()
     dunstctl set-paused false
 }
 
+menu()
+{
+    case $1 in
+        window)
+            if [ -z "$(i3-msg -t get_tree | jq -r '.nodes[] | .nodes[] | .nodes[] | .nodes[] | .window')" ]
+            then
+                set -- "power" "-theme+element-text+highlight" "@text-color" "-theme+listview+columns" "3" "-theme+listview+lines" "1"
+            fi
+            ;;&
+        *)
+            rofi -no-lazy-grab -show "$1" -modes "$1" "${@:2}"
+            ;;
+    esac
+}
+
 notify()
 {
     case $1 in

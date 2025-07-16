@@ -23,7 +23,7 @@ configuration {
     window {
         close-on-delete: false;
         hide-active-window: false;
-        prefer-icon-theme: true;
+        prefer-icon-theme: false;
     }
 
     entry {

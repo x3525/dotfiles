@@ -12,11 +12,8 @@ lock()
 menu()
 {
     case $1 in
-        window)
-            if [ -z "$(i3-msg -t get_tree | jq -r '.nodes[] | .nodes[] | .nodes[] | .nodes[] | .window')" ]
-            then
-                set -- "power" "-theme+element-text+highlight" "@text-color" "-theme+listview+columns" "3" "-theme+listview+lines" "1"
-            fi
+        power)
+            set -- "$1" "-theme+element-text+highlight" "@text-color" "-theme+listview+columns" "3" "-theme+listview+lines" "1"
             ;;&
         *)
             rofi -no-lazy-grab -show "$1" -modes "$1" "${@:2}"

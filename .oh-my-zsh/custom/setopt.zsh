@@ -1,4 +1,4 @@
-setopt +o autocd
-setopt +o interactivecomments
-setopt -o cdsilent
-setopt -o noautoremoveslash
+unsetopt AUTO_CD
+unsetopt AUTO_REMOVE_SLASH
+unsetopt INTERACTIVE_COMMENTS
+setopt CD_SILENT

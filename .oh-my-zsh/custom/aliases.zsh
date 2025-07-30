@@ -1,8 +1,4 @@
 unalias -a
-alias -g ...=../..
-alias -g ....=../../..
-alias -g .....=../../../..
-alias -g ......=../../../../..
 alias cat='bat --plain --plain --theme="Solarized (dark)"'
 alias grep='grep --color=auto'
 alias history='fc -i -l 1'

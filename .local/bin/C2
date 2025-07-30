@@ -1,7 +1,6 @@
 #!/bin/bash
 
-lock()
-{
+lock () {
     dunstctl set-paused true
 
     i3lock -n -c 000000 -p default -e -f -k
@@ -9,8 +8,7 @@ lock()
     dunstctl set-paused false
 }
 
-menu()
-{
+menu () {
     case $1 in
         power)
             set -- "$1" "-theme+element-text+highlight" "@text-color" "-theme+listview+columns" "3" "-theme+listview+lines" "1"
@@ -21,8 +19,7 @@ menu()
     esac
 }
 
-notify()
-{
+notify () {
     case $1 in
         battery)
             case $3 in
@@ -74,8 +71,7 @@ notify()
     esac
 }
 
-restart()
-{
+re () {
     for d in "$1"/*
     do
         f=$(basename -- "$d")

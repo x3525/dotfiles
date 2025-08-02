@@ -26,6 +26,10 @@ element-text {
     vertical-align: 0.5;
 }
 
+entry {
+    blink: false;
+}
+
 error-message {
     background-color: Black;
 }

@@ -9,3 +9,7 @@ exec_always --no-startup-id C2 re ~/.config/autostart/desktop.d
 focus_follows_mouse no
 
 focus_on_window_activation urgent
+
+tiling_drag off
+
+popup_during_fullscreen smart

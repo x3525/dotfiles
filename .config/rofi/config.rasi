@@ -3,11 +3,13 @@
 @theme "theme.rasi"
 
 configuration {
+    auto-select: false;
     case-sensitive: false;
+    click-to-exit: true;
     disable-history: false;
     dpi: 0;
     drun-display-format: "{name}";
-    drun-match-fields: "name#exec";
+    drun-match-fields: "all";
     font: "JetBrains Mono 12";
     hover-select: false;
     icon-theme: "Papirus";

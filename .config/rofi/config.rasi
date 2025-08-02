@@ -19,7 +19,7 @@ configuration {
     normalize-match: false;
     scroll-method: 0;
     sidebar-mode: false;
-    window-format: "({w:0}) {t:0}";
+    window-format: "{t:0}";
     window-match-fields: "all";
 
     window {

@@ -6,6 +6,10 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- C2 lock
 # Executing applications
 exec_always --no-startup-id C2 re ~/.config/autostart/desktop.d
 
+mouse_warping output
+
+focus_wrapping no
+
 focus_follows_mouse no
 
 focus_on_window_activation urgent

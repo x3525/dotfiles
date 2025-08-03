@@ -39,12 +39,12 @@ inputbar {
 }
 
 listview {
-    columns: 2;
-    cycle: true;
+    columns: 1;
+    cycle: false;
     fixed-height: true;
     flow: vertical;
     layout: vertical;
-    lines: 8;
+    lines: 5;
     require-input: false;
     reverse: false;
 }
@@ -58,5 +58,5 @@ window {
     border: 5px;
     fullscreen: false;
     location: center;
-    width: 70%;
+    width: 30%;
 }

@@ -14,7 +14,7 @@ configuration {
     hover-select: false;
     icon-theme: "Papirus";
     matching: "normal";
-    max-history-size: 10;
+    max-history-size: 5;
     monitor: -1;
     normalize-match: false;
     scroll-method: 0;

@@ -6,14 +6,14 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- C2 lock
 # Executing applications
 exec_always --no-startup-id C2 re ~/.config/autostart/desktop.d
 
+focus_follows_mouse no
+
 mouse_warping output
 
-focus_wrapping yes
+popup_during_fullscreen smart
 
-focus_follows_mouse no
+focus_wrapping yes
 
 focus_on_window_activation urgent
 
 tiling_drag off
-
-popup_during_fullscreen smart

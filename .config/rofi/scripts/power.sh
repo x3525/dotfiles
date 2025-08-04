@@ -1,9 +1,7 @@
 #!/bin/bash
 
-echo -en "\0theme\x1f@theme\"power.rasi\"\n"
-
 echo -en "poweroff\0icon\x1fsystem-shut-down\x1fdisplay\x1fShut Down\x1fpermanent\x1ftrue\x1finfo\x1fsystemctl\n"
 echo -en "reboot\0icon\x1fsystem-restart\x1fdisplay\x1fRestart\x1fpermanent\x1ftrue\x1finfo\x1fsystemctl\n"
 echo -en "exit\0icon\x1fsystem-log-out\x1fdisplay\x1fLog Out\x1fpermanent\x1ftrue\x1finfo\x1fi3-msg\n"
 
-$ROFI_INFO "$1"
+[ -z "$ROFI_INFO" ] || $ROFI_INFO "$1"

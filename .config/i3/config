@@ -1,4 +1,4 @@
-include config.d/*.conf
+include configs/*.conf
 
 # Screen locker
 exec --no-startup-id xss-lock --transfer-sleep-lock -- C2 lock

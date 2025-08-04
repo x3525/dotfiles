@@ -1,11 +1,5 @@
 include configs/*.conf
 
-# Screen locker
-exec --no-startup-id xss-lock --transfer-sleep-lock -- C2 lock
-
-# Executing applications
-exec_always --no-startup-id C2 execute ~/.config/autostart/entries
-
 focus_follows_mouse no
 
 mouse_warping output
@@ -21,3 +15,9 @@ workspace_auto_back_and_forth no
 focus_on_window_activation urgent
 
 tiling_drag off
+
+# Screen locker
+exec --no-startup-id xss-lock --transfer-sleep-lock -- C2 lock
+
+# Executing applications
+exec_always --no-startup-id C2 execute ~/.config/autostart/entries

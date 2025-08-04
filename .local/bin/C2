@@ -77,7 +77,7 @@ notify () {
     esac
 }
 
-re () {
+execute () {
     for d in "$1"/*
     do
         f=$(basename -- "$d")

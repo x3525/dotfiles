@@ -1,4 +1,3 @@
-@theme "theme.rasi"
 @import "keyboard.rasi"
 @import "mouse.rasi"
 

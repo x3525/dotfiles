@@ -20,7 +20,7 @@ decorations_theme_variant = "Dark"
 
 [scrolling]
 history = 100000
-multiplier = 10
+multiplier = 5
 
 [font]
 normal.family = "MesloLGMDZ Nerd Font Mono"

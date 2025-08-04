@@ -1,4 +1,4 @@
-@theme "theme.rasi"
+@theme "drun.rasi"
 
 element-text {
     highlight: none;

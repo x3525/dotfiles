@@ -7,7 +7,9 @@ brightness () {
 lock () {
     dunstctl set-paused true
 
-    i3lock -n -c 000000 -p default -e -f -k
+    i3lock -n -c 000000 -p default -e -f -k &
+
+    wait
 
     dunstctl set-paused false
 }
@@ -15,7 +17,7 @@ lock () {
 menu () {
     case $1 in
         power)
-            set -- "$1" "-theme+element-text+highlight" "@text-color" "-theme+listview+lines" "1"
+            set -- "$1" "-theme+element-text+highlight" "@text-color" "-theme+listview+flow" "horizontal" "-theme+listview+columns" "3" "-theme+listview+lines" "1"
             ;;&
         *)
             rofi -no-lazy-grab -show "$1" -modes "$1" "${@:2}"

@@ -1,0 +1,9 @@
+@theme "theme.rasi"
+
+element-text {
+    highlight: none;
+}
+
+listview {
+    lines: 1;
+}

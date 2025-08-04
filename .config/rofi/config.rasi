@@ -1,6 +1,6 @@
+@theme "theme.rasi"
 @import "keyboard.rasi"
 @import "mouse.rasi"
-@theme "theme.rasi"
 
 configuration {
     auto-select: false;

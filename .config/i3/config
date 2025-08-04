@@ -12,6 +12,8 @@ force_xinerama no
 
 workspace_auto_back_and_forth no
 
+force_display_urgency_hint 1000 ms
+
 focus_on_window_activation urgent
 
 tiling_drag off

@@ -7,8 +7,8 @@ import = [
 dimensions.columns = 120
 dimensions.lines = 30
 position = "None"
-padding.x = 10
-padding.y = 10
+padding.x = 0
+padding.y = 0
 dynamic_padding = false
 decorations = "Full"
 opacity = 1.0
@@ -20,7 +20,7 @@ decorations_theme_variant = "Dark"
 
 [scrolling]
 history = 100000
-multiplier = 5
+multiplier = 10
 
 [font]
 normal.family = "MesloLGMDZ Nerd Font Mono"

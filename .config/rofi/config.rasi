@@ -22,13 +22,13 @@ configuration {
     window-format: "{t:0}";
     window-match-fields: "all";
 
+    entry {
+        max-history: 0;
+    }
+
     window {
         close-on-delete: false;
         hide-active-window: false;
         prefer-icon-theme: false;
-    }
-
-    entry {
-        max-history: 0;
     }
 }

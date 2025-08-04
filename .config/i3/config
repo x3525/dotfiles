@@ -4,7 +4,7 @@ include config.d/*.conf
 exec --no-startup-id xss-lock --transfer-sleep-lock -- C2 lock
 
 # Executing applications
-exec_always --no-startup-id C2 re ~/.config/autostart/desktop.d
+exec_always --no-startup-id C2 execute ~/.config/autostart/desktop.d
 
 focus_follows_mouse no
 

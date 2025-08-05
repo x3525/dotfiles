@@ -8,7 +8,7 @@ configuration {
     disable-history: false;
     dpi: 0;
     drun-display-format: "{name}";
-    drun-match-fields: "all";
+    drun-match-fields: "name#exec";
     font: "JetBrains Mono 12";
     hover-select: false;
     icon-theme: "Papirus";

@@ -30,3 +30,13 @@ set smartcase
 set smartindent
 set softtabstop=4
 set whichwrap+=<,>,h,l,[,]
+
+if has('clipboard')
+nnoremap <Leader>d "+dd
+nnoremap <Leader>y "+yy
+nnoremap <Leader>p "+p
+
+vnoremap <Leader>d "+d
+vnoremap <Leader>y "+y
+vnoremap <Leader>p "+p
+endif

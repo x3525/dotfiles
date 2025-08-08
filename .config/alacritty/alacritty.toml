@@ -8,19 +8,11 @@ import=[
 x=5
 y=5
 
-[window]
-dynamic_padding=false
-decorations="Full"
-opacity=1.0
-dynamic_title=true
-
 [scrolling]
 history=100000
-multiplier=5
 
 [font.normal]
 family="MesloLGMDZ Nerd Font Mono"
-style="Regular"
 
 [font.bold]
 style="Regular"
@@ -38,10 +30,6 @@ size=14.0
 x=0
 y=0
 
-[font.glyph_offset]
-x=0
-y=0
-
 [bell]
 duration=0
 
@@ -50,11 +38,9 @@ save_to_clipboard=false
 
 [cursor.style]
 shape="Block"
-blinking="Never"
 
 [cursor]
 unfocused_hollow=true
-thickness=0.15
 
 [terminal]
 osc52="Disabled"
@@ -63,5 +49,5 @@ osc52="Disabled"
 hide_when_typing=true
 
 [[hints.enabled]]
+command="xdg-open"
 regex=""
-action="Select"

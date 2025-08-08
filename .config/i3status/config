@@ -36,7 +36,7 @@ cpu_usage {
     format_above_degraded_threshold = "C %usage"
     format_above_threshold = "C %usage"
     max_threshold = 90
-    min_width = "C ,,,%"
+    min_width = "@ ,,,%"
 }
 
 ethernet _first_ {
@@ -49,7 +49,7 @@ memory {
     format = "M %percentage_used"
     format_degraded = "M %percentage_used"
     memory_used_method = "memavailable"
-    min_width = "M ,,,.,%"
+    min_width = "@ ,,,.,%"
     threshold_critical = "10%"
     threshold_degraded = "30%"
 }
@@ -68,7 +68,7 @@ volume default {
     device = "default"
     format = "V %volume"
     format_muted = "M %volume"
-    min_width = "V ,,,%"
+    min_width = "@ ,,,%"
 }
 
 wireless _first_ {

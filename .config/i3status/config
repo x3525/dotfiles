@@ -1,78 +1,78 @@
 general {
-    colors = false
-    interval = 1
-    output_format = "i3bar"
+    colors=false
+    interval=1
+    output_format="i3bar"
 }
 
-order += "wireless _first_"
-order += "ethernet _first_"
-order += "memory"
-order += "cpu_usage"
-order += "volume default"
-order += "battery all"
-order += "tztime weekday"
-order += "time"
+order+="wireless _first_"
+order+="ethernet _first_"
+order+="memory"
+order+="cpu_usage"
+order+="volume default"
+order+="battery all"
+order+="tztime weekday"
+order+="time"
 
 battery all {
-    format = "%status %percentage"
-    format_down = ""
-    format_percentage = "%3.0f%s"
-    hide_seconds = true
-    last_full_capacity = true
-    low_threshold = 20
-    path = "/sys/class/power_supply/BAT%d/uevent"
-    status_bat = "<"
-    status_chr = ">"
-    status_full = "+"
-    status_idle = "="
-    status_unk = "?"
-    threshold_type = "percentage"
+    format="%status %percentage"
+    format_down=""
+    format_percentage="%3.0f%s"
+    hide_seconds=true
+    last_full_capacity=true
+    low_threshold=20
+    path="/sys/class/power_supply/BAT%d/uevent"
+    status_bat="<"
+    status_chr=">"
+    status_full="+"
+    status_idle="="
+    status_unk="?"
+    threshold_type="percentage"
 }
 
 cpu_usage {
-    align = "left"
-    degraded_threshold = 70
-    format = "C %usage"
-    format_above_degraded_threshold = "C %usage"
-    format_above_threshold = "C %usage"
-    max_threshold = 90
-    min_width = "@ ,,,%"
+    align="left"
+    degraded_threshold=70
+    format="C %usage"
+    format_above_degraded_threshold="C %usage"
+    format_above_threshold="C %usage"
+    max_threshold=90
+    min_width="@ ,,,%"
 }
 
 ethernet _first_ {
-    format_down = ""
-    format_up = "ETHERNET"
+    format_down=""
+    format_up="ETHERNET"
 }
 
 memory {
-    align = "left"
-    format = "M %percentage_used"
-    format_degraded = "M %percentage_used"
-    memory_used_method = "memavailable"
-    min_width = "@ ,,,.,%"
-    threshold_critical = "10%"
-    threshold_degraded = "30%"
+    align="left"
+    format="M %percentage_used"
+    format_degraded="M %percentage_used"
+    memory_used_method="memavailable"
+    min_width="@ ,,,.,%"
+    threshold_critical="10%"
+    threshold_degraded="30%"
 }
 
 time {
-    format = "%H:%M:%S%n%d/%m/%y"
+    format="%H:%M:%S%n%d/%m/%y"
 }
 
 tztime weekday {
-    format = "%a"
-    hide_if_equals_localtime = false
+    format="%a"
+    hide_if_equals_localtime=false
 }
 
 volume default {
-    align = "left"
-    device = "default"
-    format = "V %volume"
-    format_muted = "M %volume"
-    min_width = "@ ,,,%"
+    align="left"
+    device="default"
+    format="V %volume"
+    format_muted="M %volume"
+    min_width="@ ,,,%"
 }
 
 wireless _first_ {
-    format_down = ""
-    format_quality = "%3d%s"
-    format_up = "WIRELESS"
+    format_down=""
+    format_quality="%3d%s"
+    format_up="WIRELESS"
 }

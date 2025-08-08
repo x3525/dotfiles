@@ -6,9 +6,9 @@ autocmd BufReadPost * if line("'\"") >= 1 && line("'\"") <= line("$") | execute 
 filetype indent on
 syntax on
 
-let &t_EI = "\e[2 q"
-let &t_SI = "\e[6 q"
-let &t_SR = "\e[2 q"
+let &t_EI="\e[2 q"
+let &t_SI="\e[6 q"
+let &t_SR="\e[2 q"
 
 set autoindent
 set backspace=indent,eol,start

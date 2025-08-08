@@ -32,11 +32,11 @@ battery all {
 cpu_usage {
     align="left"
     degraded_threshold=70
-    format="C %usage"
-    format_above_degraded_threshold="C %usage"
-    format_above_threshold="C %usage"
+    format="C:%usage"
+    format_above_degraded_threshold="C:%usage"
+    format_above_threshold="C:%usage"
     max_threshold=90
-    min_width="@ ,,,%"
+    min_width="@:,,,%"
 }
 
 ethernet _first_ {
@@ -46,10 +46,10 @@ ethernet _first_ {
 
 memory {
     align="left"
-    format="M %percentage_used"
-    format_degraded="M %percentage_used"
+    format="M:%percentage_used"
+    format_degraded="M:%percentage_used"
     memory_used_method="memavailable"
-    min_width="@ ,,,.,%"
+    min_width="@:,,,.,%"
     threshold_critical="10%"
     threshold_degraded="30%"
 }
@@ -66,9 +66,9 @@ tztime weekday {
 volume default {
     align="left"
     device="default"
-    format="V %volume"
-    format_muted="M %volume"
-    min_width="@ ,,,%"
+    format="V:%volume"
+    format_muted="M:%volume"
+    min_width="@:,,,%"
 }
 
 wireless _first_ {

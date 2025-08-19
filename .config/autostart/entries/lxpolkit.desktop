@@ -1,4 +1,5 @@
 [Desktop Entry]
 Exec=lxpolkit
 Name=lxsession-gtk3
+Terminal=false
 Type=Application

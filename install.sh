@@ -21,4 +21,5 @@ cp -r -- .[!g]* ~
 # Build font information cache files
 fc-cache -fv
 
+# Enable timers
 systemctl --user enable battery-notification.timer

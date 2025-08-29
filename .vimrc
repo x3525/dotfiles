@@ -18,7 +18,7 @@ set ignorecase
 set incsearch
 set laststatus=2
 set list
-set listchars=tab:>-,trail:^,extends:>,precedes:<,nbsp:~
+set listchars=trail:^,tab:>-,extends:>,precedes:<,nbsp:~
 set mouse=
 set nobackup
 set noshowmatch

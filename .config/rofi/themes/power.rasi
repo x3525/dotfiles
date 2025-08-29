@@ -7,3 +7,8 @@ element-text {
 listview {
     lines: 1;
 }
+
+window {
+    border-radius: 10px;
+    width: 15%;
+}

@@ -1,8 +1,8 @@
 unalias -a
 alias cat='bat --plain --plain --theme="Solarized (dark)"'
+alias clear='clear -x'
 alias grep='grep --color=auto'
-alias la='ls --color=auto -l --human-readable --all'
-alias ll='ls --color=auto -l --human-readable'
 alias ls='ls --color=auto'
+alias rm='trash-put'
 alias xc='xsel --clipboard --input'
 alias xp='xsel --clipboard --output'

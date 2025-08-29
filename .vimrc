@@ -11,6 +11,9 @@ set backspace=indent,eol,start
 set confirm
 set encoding=UTF-8
 set expandtab
+set foldlevel=0
+set foldmethod=marker
+set foldopen=
 set ignorecase
 set incsearch
 set laststatus=2

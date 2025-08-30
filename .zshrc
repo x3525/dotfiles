@@ -1,13 +1,15 @@
-for plugin in /usr/share/zsh/plugins/*/*.plugin.zsh
+for p in /usr/share/zsh/plugins/*/*.plugin.zsh
 do
-    source "$plugin"
+    source "$p"
 done
-unset plugin
 
-for config in "$HOME"/.zsh/*.zsh
+unset p
+
+for c in "$HOME"/.zsh/*.zsh
 do
-    source "$config"
+    source "$c"
 done
-unset config
+
+unset c
 
 eval "$(oh-my-posh init zsh -c ~/.oh-my-posh/themes/custom.omp.json)"

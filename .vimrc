@@ -1,10 +1,6 @@
 set nocompatible
 set noloadplugins
 
-let &t_SI="\e[6 q"
-let &t_SR="\e[4 q"
-let &t_EI="\e[2 q"
-
 autocmd BufReadPost * if line("'\"") >= 1 && line("'\"") <= line("$") | execute "normal! g`\"" | endif
 
 filetype indent on

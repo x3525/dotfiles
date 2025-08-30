@@ -58,5 +58,5 @@ window {
     border: 6px;
     fullscreen: false;
     location: center;
-    width: 30%;
+    width: 40%;
 }

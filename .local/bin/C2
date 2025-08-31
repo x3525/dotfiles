@@ -1,21 +1,21 @@
 #!/bin/bash
 
 brightness () {
-    brightnessctl set "$2"%"$1"
+    command brightnessctl set "$2"%"$1"
 }
 
 lock () {
-    dunstctl set-paused true
+    command dunstctl set-paused true
 
-    i3lock -n -c 000000 -p default -e -f -k &
+    command i3lock -n -c 000000 -p default -e -f -k &
 
     wait
 
-    dunstctl set-paused false
+    command dunstctl set-paused false
 }
 
 menu () {
-    rofi -no-lazy-grab -show "$1" -modes "$1" -theme "$1"
+    command rofi -no-lazy-grab -show "$1" -modes "$1" -theme "$1"
 }
 
 notify () {
@@ -37,35 +37,35 @@ notify () {
             esac
             case $2 in
                 C)
-                    notify-send -h string:x-dunst-stack-tag:battery -u low -i "$ICON"-charging "battery" "battery is charging"
+                    command notify-send -h string:x-dunst-stack-tag:battery -u low -i "$ICON"-charging "battery" "battery is charging"
                     ;;
                 D)
-                    notify-send -h string:x-dunst-stack-tag:battery -u critical -i "$ICON" "battery" "battery is discharging"
+                    command notify-send -h string:x-dunst-stack-tag:battery -u critical -i "$ICON" "battery" "battery is discharging"
                     ;;
                 F)
-                    notify-send -h string:x-dunst-stack-tag:battery -u low "honorificabilitudinitatibus"
+                    command notify-send -h string:x-dunst-stack-tag:battery -u low "honorificabilitudinitatibus"
                     ;;
                 N)
-                    notify-send -h string:x-dunst-stack-tag:battery -u low "honorificabilitudinitatibus"
+                    command notify-send -h string:x-dunst-stack-tag:battery -u low "honorificabilitudinitatibus"
                     ;;
                 U)
-                    notify-send -h string:x-dunst-stack-tag:battery -u critical -i battery-missing "battery" "battery status unknown"
+                    command notify-send -h string:x-dunst-stack-tag:battery -u critical -i battery-missing "battery" "battery status unknown"
                     ;;
             esac
             ;;
         volume)
-            pamixer -"$2" "$3" --allow-boost --set-limit=150
+            command pamixer -"$2" "$3" --allow-boost --set-limit=150
 
-            killall -s USR1 i3status
+            command killall -s USR1 i3status
 
-            if pamixer --get-mute | grep -q true
+            if command pamixer --get-mute | command grep -q -- true
             then
                 ICON=volume-level-none
             else
                 ICON=volume-level-high
             fi
 
-            notify-send -h string:x-dunst-stack-tag:volume -u low -i "$ICON" "" -h int:value:"$(pamixer --get-volume)"
+            command notify-send -h string:x-dunst-stack-tag:volume -u low -i "$ICON" "" -h int:value:"$(command pamixer --get-volume)"
             ;;
     esac
 }
@@ -73,19 +73,19 @@ notify () {
 execute () {
     for d in "$1"/*
     do
-        f=$(basename -- "$d")
+        f=$(command basename -- "$d")
 
         p=${f%.*}
 
-        killall -q -- "$p"
+        command killall -q -- "$p"
 
-        while pgrep -u "$(id -u)" -x "$p"
+        while command pgrep -u "$(command id -u)" -x "$p"
         do
-            sleep 1
+            command sleep 1
         done
     done
 
-    dex -a -s "$1"
+    command dex -a -s "$1"
 }
 
 $1 "${@:2}"

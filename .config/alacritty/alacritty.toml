@@ -1,7 +1,7 @@
 [general]
 import=[
 "colors.toml",
-"alacritty-theme/themes/solarized_osaka.toml",
+"themes/solarized_osaka.toml",
 ]
 
 [window.padding]

@@ -1,4 +1,20 @@
-zstyle ':completion:*' list-colors \
+autoload -Uz compinit; compinit
+
+zstyle ':completion:*' completer \
+    _extensions \
+    _complete
+
+zstyle ':completion:*' complete-options \
+    true
+zstyle ':completion:*' squeeze-slashes \
+    true
+
+
+
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path "$XDG_CACHE_HOME/zsh/.zcompcache"
+
+zstyle ':completion:*:*:*:*:default' list-colors \
     "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' matcher-list \
     'r:|=*' \
@@ -7,5 +23,3 @@ zstyle ':completion:*' menu \
     select
 zstyle ':completion:*' special-dirs \
     true
-zstyle ':completion:*' use-cache \
-    yes

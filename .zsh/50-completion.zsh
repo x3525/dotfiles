@@ -1,4 +1,5 @@
 autoload -Uz compinit; compinit
+_comp_options+=(globdots)
 
 zstyle ':completion:*' completer \
     _extensions \

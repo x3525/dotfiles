@@ -5,7 +5,7 @@
     <property name="clipman" type="empty">
       <property name="tweaks" type="empty">
         <property name="popup-at-pointer" type="bool" value="false"/>
-        <property name="max-menu-items" type="uint" value="15"/>
+        <property name="max-menu-items" type="uint" value="20"/>
         <property name="skip-action-on-key-down" type="bool" value="false"/>
         <property name="reorder-items" type="bool" value="true"/>
         <property name="reverse-menu-order" type="bool" value="false"/>

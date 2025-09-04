@@ -4,8 +4,8 @@ bindkey '^[[1;5C' forward-word
 bindkey '^[[1;5D' backward-word
 bindkey '^[[3;5~' kill-word
 bindkey '^[[3~' delete-char
-bindkey '^[[5~' up-line-or-beginning-search
-bindkey '^[[6~' down-line-or-beginning-search
+bindkey '^[[5~' up-line-or-history
+bindkey '^[[6~' down-line-or-history
 bindkey '^[[A' up-line-or-beginning-search
 bindkey '^[[B' down-line-or-beginning-search
 bindkey '^[[F' end-of-line

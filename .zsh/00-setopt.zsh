@@ -1,4 +1,5 @@
 unsetopt AUTO_REMOVE_SLASH
+unsetopt BANG_HIST
 unsetopt FLOW_CONTROL
 setopt ALWAYS_TO_END
 setopt AUTO_PUSHD

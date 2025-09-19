@@ -11,4 +11,4 @@ done; unset f
 export EDITOR=vim
 export VISUAL=vim
 
-PROMPT='%F{blue}%(1j.%U%d%u.%d)%f%(0?.%F{cyan}%(!.#.$)%f.%F{red}%(!.#.$)%f) '
+PROMPT='%F{blue}%(1j.%U%~%u.%~)%f%(0?.%F{cyan}%(!.#.$)%f.%F{red}%(!.#.$)%f) '

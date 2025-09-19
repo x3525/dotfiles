@@ -1,0 +1,5 @@
+[Desktop Entry]
+Exec=easyeffects --gapplication-service
+Name=easyeffects
+Terminal=false
+Type=Application

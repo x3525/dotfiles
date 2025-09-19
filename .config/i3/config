@@ -2,19 +2,9 @@ include configs/*.conf
 
 focus_follows_mouse no
 
-mouse_warping output
-
 popup_during_fullscreen smart
 
-focus_wrapping yes
-
-force_xinerama no
-
-workspace_auto_back_and_forth no
-
 focus_on_window_activation urgent
-
-show_marks yes
 
 tiling_drag off
 

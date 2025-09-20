@@ -1,4 +1,4 @@
-history () {
+history() {
     if [ $# -eq 0 ]
     then
         fc -i -l 1

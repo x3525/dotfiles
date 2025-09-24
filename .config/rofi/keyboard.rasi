@@ -15,7 +15,7 @@ configuration {
     kb-remove-char-back: "BackSpace";
     kb-remove-to-eol: "";
     kb-remove-to-sol: "";
-    kb-accept-entry: "Return";
+    kb-accept-entry: "Return,KP_Enter";
     kb-accept-custom: "";
     kb-accept-custom-alt: "";
     kb-accept-alt: "";

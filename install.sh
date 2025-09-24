@@ -8,8 +8,5 @@ fi
 
 command cp -r -- .[!g]* ~
 
-# Build font information cache files
-command fc-cache -fv
-
 # Enable timers
 command systemctl --user enable battery-notification.timer

@@ -21,6 +21,7 @@ set nobackup
 set noshowmatch
 set scrolloff=999
 set shiftwidth=4
+set shortmess=finxoOstTI
 set showmode
 set smartcase
 set smartindent

@@ -71,6 +71,8 @@ notify() {
 }
 
 execute() {
+    [ -d "$1" ] || return
+
     for d in "$1"/*
     do
         f=$(command basename -- "$d")

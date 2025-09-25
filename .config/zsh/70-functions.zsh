@@ -3,7 +3,7 @@ history() {
     then
         fc -i -l 1
     else
-        print -n -u 2 "Delete comma[N]d histor[y]? "
+        print -n -u 2 "Clear the histor[y] list? "
 
         read -r || print
 

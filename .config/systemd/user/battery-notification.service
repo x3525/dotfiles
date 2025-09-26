@@ -3,7 +3,7 @@ Description=Battery Notification
 
 [Service]
 Type=exec
-ExecStart=-bash -c "POWER_SUPPLY=$(command systemctl --user show -P Description battery-notification.timer) && export POWER_SUPPLY_STATUS=$(command cut -c1 /sys/class/power_supply/$POWER_SUPPLY/status) && ! command systemctl --user show-environment | command grep -q -- POWER_SUPPLY_STATUS=$POWER_SUPPLY_STATUS && command systemctl --user import-environment POWER_SUPPLY_STATUS && POWER_SUPPLY_CAPACITY=$(command cat /sys/class/power_supply/$POWER_SUPPLY/capacity) && CCC notify battery $POWER_SUPPLY_STATUS $POWER_SUPPLY_CAPACITY"
+ExecStart=-bash -c "POWER_SUPPLY=$(command systemctl --user show -P Description battery-notification.timer) && export POWER_SUPPLY_STATUS=$(command cut -c 1 /sys/class/power_supply/$POWER_SUPPLY/status) && ! command systemctl --user show-environment | command grep -q -- POWER_SUPPLY_STATUS=$POWER_SUPPLY_STATUS && command systemctl --user import-environment POWER_SUPPLY_STATUS && POWER_SUPPLY_CAPACITY=$(command cat /sys/class/power_supply/$POWER_SUPPLY/capacity) && CCC notify battery $POWER_SUPPLY_STATUS $POWER_SUPPLY_CAPACITY"
 
 [Install]
 WantedBy=default.target

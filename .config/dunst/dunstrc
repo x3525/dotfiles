@@ -183,7 +183,7 @@
     # Show age of message if message is older than show_age_threshold
     # seconds.
     # Set to -1 to disable.
-    show_age_threshold=-1
+    show_age_threshold=300
 
     # Specify where to make an ellipsis in long lines.
     # Possible values are "start", "middle" and "end".
@@ -238,7 +238,7 @@
     ### Misc/Advanced ###
 
     # dmenu path.
-    dmenu=/usr/bin/dmenu -p dunst:
+    # dmenu=/usr/bin/dmenu -p dunst:
 
     # Browser for opening urls in context menu.
     browser=/usr/bin/xdg-open
@@ -278,7 +278,7 @@
 
     # Uncomment this if you want to let notifications appear under fullscreen
     # applications (default: overlay)
-    # layer = top
+    layer=top
 
     # Set this to true to use X11 output on Wayland.
     force_xwayland=false

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ "$(id -u)" -eq 0 ]
+if [ "$(command id -u)" -eq 0 ]
 then
     command echo "Privileged access is not allowed!"
     exit 1

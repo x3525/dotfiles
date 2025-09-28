@@ -24,10 +24,4 @@ configuration {
     entry {
         max-history: 0;
     }
-
-    window {
-        close-on-delete: false;
-        hide-active-window: false;
-        prefer-icon-theme: false;
-    }
 }

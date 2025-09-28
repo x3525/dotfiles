@@ -37,18 +37,23 @@ notify() {
             esac
             case $2 in
                 C)
+                    # Charging
                     notify-send -h string:x-dunst-stack-tag:battery -u low -i battery-"$CAPACITY"-charging "battery" "battery is charging"
                     ;;
                 D)
+                    # Discharging
                     notify-send -h string:x-dunst-stack-tag:battery -u critical -i battery-"$CAPACITY" "battery" "battery is discharging"
                     ;;
                 F)
+                    # Full
                     notify-send -h string:x-dunst-stack-tag:battery -u low "honorificabilitudinitatibus"
                     ;;
                 N)
+                    # Not charging
                     notify-send -h string:x-dunst-stack-tag:battery -u low "honorificabilitudinitatibus"
                     ;;
                 U)
+                    # Unknown
                     notify-send -h string:x-dunst-stack-tag:battery -u critical -i battery-missing "battery" "battery status unknown"
                     ;;
             esac

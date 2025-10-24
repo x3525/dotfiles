@@ -31,6 +31,7 @@ entry {
 }
 
 error-message {
+    background-color: Black;
     enabled: true;
     padding: 20px;
 }

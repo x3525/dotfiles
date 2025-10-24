@@ -10,7 +10,7 @@
 element {
     children: [ element-icon, element-text ];
     padding: 20px;
-    spacing: 20px;
+    spacing: 10px;
 }
 
 element selected {
@@ -31,7 +31,8 @@ entry {
 }
 
 error-message {
-    enabled: false;
+    enabled: true;
+    padding: 20px;
 }
 
 inputbar {

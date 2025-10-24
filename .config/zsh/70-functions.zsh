@@ -5,10 +5,10 @@ history() {
     else
         print -n -u 2 "Clear the histor[y] list? "
 
-        read -r || print
+        read -r
 
         case $REPLY in
-            [yY])
+            y|Y)
                 print -n -u 2 >| "$HISTFILE"
                 fc -p "$HISTFILE"
                 ;;

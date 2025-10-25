@@ -9,7 +9,7 @@ configuration {
     dpi: 0;
     drun-display-format: "{name}";
     drun-match-fields: "name#exec";
-    font: "JetBrains Mono 12";
+    font: "JetBrains Mono NL 12";
     hover-select: false;
     icon-theme: "Papirus";
     matching: "normal";

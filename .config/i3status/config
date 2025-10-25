@@ -4,10 +4,11 @@ general {
     output_format="i3bar"
 }
 
+order+="read_file active_profile"
 order+="wireless _first_"
 order+="ethernet _first_"
-order+="memory"
 order+="cpu_usage"
+order+="memory"
 order+="volume default"
 order+="battery all"
 order+="tztime weekday"
@@ -30,28 +31,34 @@ battery all {
 }
 
 cpu_usage {
-    align="left"
+    align="right"
     degraded_threshold=70
-    format="C:%usage"
-    format_above_degraded_threshold="C:%usage"
-    format_above_threshold="C:%usage"
+    format="|%usage|"
+    format_above_degraded_threshold="|%usage|"
+    format_above_threshold="|%usage|"
     max_threshold=90
-    min_width="C:***%"
+    min_width="|000%|"
 }
 
 ethernet _first_ {
     format_down=""
-    format_up="E:%ip"
+    format_up="%ip"
 }
 
 memory {
-    align="left"
-    format="M:%percentage_used"
-    format_degraded="M:%percentage_used"
+    align="right"
+    format="|%percentage_used|"
+    format_degraded="|%percentage_used|"
     memory_used_method="memavailable"
-    min_width="M:***.*%"
+    min_width="|000.0%|"
     threshold_critical="10%"
     threshold_degraded="30%"
+}
+
+read_file active_profile {
+    format="|%content|"
+    format_bad=""
+    path="/etc/tuned/active_profile"
 }
 
 time {
@@ -64,15 +71,15 @@ tztime weekday {
 }
 
 volume default {
-    align="left"
+    align="right"
     device="default"
-    format="V:%volume"
-    format_muted="M:%volume"
-    min_width="V:***%"
+    format="%volume"
+    format_muted="-%volume"
+    min_width="-000%"
 }
 
 wireless _first_ {
     format_down=""
     format_quality="%3d%s"
-    format_up="W:%ip"
+    format_up="%ip"
 }

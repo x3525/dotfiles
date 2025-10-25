@@ -74,8 +74,8 @@ volume default {
     align="right"
     device="default"
     format="%volume"
-    format_muted="-%volume"
-    min_width="-000%"
+    format_muted="MUTE"
+    min_width="000%"
 }
 
 wireless _first_ {

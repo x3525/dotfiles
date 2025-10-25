@@ -15,3 +15,5 @@ bindkey '^[OA' up-line-or-beginning-search
 bindkey '^[OB' down-line-or-beginning-search
 bindkey '^[OF' end-of-line
 bindkey '^[OH' beginning-of-line
+bindkey '^R' history-incremental-search-backward
+bindkey '^S' history-incremental-search-forward

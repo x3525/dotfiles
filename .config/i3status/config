@@ -1,0 +1,53 @@
+general {
+    colors="false"
+    interval="1"
+    markup="pango"
+    output_format="i3bar"
+}
+
+order+="tztime weekday"
+order+="cpu_usage"
+order+="memory"
+order+="volume default"
+order+="battery 0"
+order+="time"
+
+battery 0 {
+    format="%percentage"
+    format_down=""
+    format_percentage="%03.0f%s"
+    last_full_capacity="true"
+    path="/sys/class/power_supply/BAT0/uevent"
+}
+
+cpu_usage {
+    align="right"
+    format="%usage"
+    format_above_degraded_threshold="%usage"
+    format_above_threshold="%usage"
+    min_width="****"
+}
+
+memory {
+    align="right"
+    format="%percentage_used"
+    format_degraded="%percentage_used"
+    memory_used_method="memavailable"
+    min_width="******"
+}
+
+time {
+    format="%H:%M:%S%n<u>%d</u>/%m/%y"
+}
+
+tztime weekday {
+    format="<u>%A</u>"
+    locale="tr_TR.UTF-8"
+}
+
+volume default {
+    align="right"
+    format="%volume"
+    format_muted="<s>%volume</s>"
+    min_width="****"
+}

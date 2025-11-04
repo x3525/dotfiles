@@ -1,0 +1,23 @@
+@theme "drun.rasi"
+
+element {
+    orientation: vertical;
+}
+
+element-icon {
+    horizontal-align: 0.5;
+}
+
+element-text {
+    highlight: none;
+    horizontal-align: 0.5;
+}
+
+listview {
+    lines: 1;
+}
+
+window {
+    border-radius: 10px;
+    width: 20%;
+}
